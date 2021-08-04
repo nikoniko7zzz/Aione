@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="welcome">
+    <h1 class="title">Koredecide</h1>
+    <p class="subtitle">これで決める</p>
+    <a class="btn btn-primary" href="{% url 'search_new' %}">検索する</a>
+    
+</div>
+
+<!--{% if searchs %}-->
+<!--<table class="table">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>キーワード1</th>-->
+                <!--<th>キーワード2</th>-->
+                <!--<th>キーワード3</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            {% for search in searchs %}-->
+<!--            <tr>-->
+                <!--<th>{{ search.created_by.username }}</th>-->
+                <!--<th>{{ search.created_at }}</th>-->
+<!--                <th><a href="{% url 'search_detail' search.id %}">{{ search.keyword1 }}</a></th>-->
+<!--            </tr>-->
+<!--            {% endfor %}-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--</table>-->
+<!--{% else %}-->
+<!--<p>***</p>-->
+<!--{% endif %}-->
+<!--{% endblock %}-->

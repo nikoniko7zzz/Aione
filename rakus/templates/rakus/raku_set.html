@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+
+
+{% block main %}
+    <div class="new_box">
+        <!--<h1 class="title">Aione</h1>-->
+      <div class="shadow p-3 mb-5 bg-white rounded">
+        <p class="subtitle">SETTING</p>
+        <p class="new_btn">設定画面</p>
+        <!--<p class="new_btn">GIFT</p>-->
+        
+        <!--アコーディオン-->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  MY
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <P>MY settin 内容</P>  
+                  <a>誕生日: </a><input type="text" id="#" name="#">
+                  <br>
+                  <a>性別: </a><input type="text" id="#" name="#">
+                  <br>
+                  <a>職種: </a><input type="text" id="#" name="#">
+                  <br>
+                  <a>同居家族: </a><input type="text" id="#" name="#">
+                  <br>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  GIFT
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">GIFT settin 内容</div>
+              </div>
+            </div>
+          </div>            
+          
+          
+          <!--<form action="{% url 'raku_search' %}" method="GET">-->
+          <!--  {% csrf_token %}-->
+          <!--  <a>keyword1: </a><input type="text" id="keyword1" name="keyword1">-->
+          <!--  <br>-->
+          <!--  <a>keyword2: </a><input type="text" id="keyword2" name="keyword2">-->
+          <!--  <br>-->
+          <!--  <a>keyword3: </a><input type="text" id="keyword3" name="keyword3">-->
+          <!--  <br>-->
+
+          <!--  <section>-->
+          <!--      <button type="submit" class="btn_10" href="{% url 'raku_search' %}"><span>GO</span></button>-->
+          <!--  </section> -->
+            <!--<section>-->
+            <!--  <button type="submit" href="{% url 'raku_search' %}"></button><a href="" class="btn_10"><span>Let's   AIONE</span></a></button>-->
+            <!--</section>-->
+
+          <!--</form>-->
+          
+      </div>
+        
+    </div>
+
+{% endblock %}

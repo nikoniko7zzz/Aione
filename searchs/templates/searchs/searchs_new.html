@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block main %}
+<h2>これを探す</h2>
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="検索" %}
+</form>
+
+<details class="answer_area">
+    <summary class="push_menu" id="answer_box">表示する</summary>
+    <div class="product">
+        <img src="img/お菓子.webp" alt="商品画像" id="product_img" hight="300px" width="300px" margin:0 auto>
+        <p id="product_text">テキスト</p>
+        <p id="product_price">価格</p>
+        <p class="push_menu"><a href="https://item.rakuten.co.jp/serendip-takasaki/assort/" id="mylink">商品ページを見る</a></p>
+        <div>
+</details>
+{% endblock %}

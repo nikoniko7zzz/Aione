@@ -1,0 +1,61 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Aione</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'rakus/css/style.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'rakus/css/reset.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'rakus/css/sanitize.css' %}">-->
+    {% block extraheader %}{% endblock %}
+</head>
+<body>
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+
+        <a href="/" class="navbar-brand">AIONE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'raku_set' %}">SETTING</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                {% if user.is_authenticated %}
+                <li class="nav-item login"><a class="nav-link" href="{% url 'logout' %}">ログアウト</a></li>
+                {% else %}
+                <li class="nav-item login"><a class="nav-link" href="{% url 'login' %}">ログイン</a></li>
+                <li class="nav-item login"><a class="nav-link" href="{% url 'signup' %}">会員登録</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <!--<div class="container">-->
+        {% block main %}{% endblock %}
+    <!--</div>-->
+</main>
+</body>
+</html>

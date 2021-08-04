@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+
+
+{% block main %}
+    <div class="new_box">
+        <!--<h1 class="title">Aione</h1>-->
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <p class="subtitle">Let's AIONE</p>
+            <p class="new_btn">[ MY ]</p>
+            <p class="new_btn">[ GIFT ]</p>
+
+            <form action="{% url 'raku_search' %}" method="GET">
+                {% csrf_token %}
+                <a>keyword1: </a><input type="text" id="keyword1" name="keyword1">
+                <br>
+                <a>keyword2: </a><input type="text" id="keyword2" name="keyword2">
+                <br>
+                <a>keyword3: </a><input type="text" id="keyword3" name="keyword3">
+                <br>
+                
+                
+                
+                <section>
+                    <button type="submit" class=href="{% url 'raku_search' %}"><span>GO</span></button>
+                </section> 
+                
+            </form>
+        </div>
+        
+    </div>
+
+{% endblock %}

@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+    display: flex;
+    justify-content:center;
+    background-image: url();
+}
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #333333;
+    background-color:#ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 4% 4%; /* スマホ向け余白の設定 */
+    padding-top: 60px;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* header
+------------------------------- */
+/*body {*/
+    /*padding: 0 4%; */
+    /* スマホ向け余白の設定 */
+/*    border: 1px solid black;*/
+/*    height: 812px;*/
+    /*background-image: url("/Users/niko/Desktop/G'sアカデミー/nikoniko/ビンゴゲーム/0513/黄色.jpeg");*/
+    /*background-position: center;*/
+    /* background-size: cover; */
+    /*background-size: 130% auto;*/
+/*}*/
+/*nav {*/
+/*    margin: 0 4%;*/
+/*}*/
+main {
+    background-color: white;
+}
+.new_box {
+    padding-top: 50px;
+    margin-bottom: 2rem;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    height: 100vh;
+}
+.search_box {
+    padding-top: 50px;
+    margin-bottom: 2rem;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    height: 100vh;
+}
+
+.top_img {
+    border-color: 1px solid gray;
+    background-color: gray;
+    height: 500px;
+    width: 100%;
+}
+.subtitle {
+    font-size: 30px;
+}
+
+.result_title {
+    margin-top: 50px;
+    width: 490px;
+    text-align: center;
+}
+
+
+section {
+  max-width: 300px;
+  margin: 15px auto;
+}
+a.btn_10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+}
+a.btn_10 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  box-shadow: 0px 5px 12px #CAD4E2, -6px -6px 12px #FFF;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  transition-duration: 0.2s;
+}
+a.btn_10:hover span {
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 4px #CAD4E2, -2px -2px 4px #FFF;
+}
+button.btn_10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+}
+button.btn_10 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  box-shadow: 0px 5px 12px #CAD4E2, -6px -6px 12px #FFF;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  transition-duration: 0.2s;
+}
+button.btn_10:hover span {
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 4px #CAD4E2, -2px -2px 4px #FFF;
+}
