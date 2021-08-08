@@ -29,6 +29,11 @@ def raku_new(request):
 @login_required
 def raku_set(request):
     return render(request,'rakus/raku_set.html') 
+    
+@login_required
+def raku_get(request):
+    return render(request,'rakus/raku_get.html') 
+    
 
 random = random.randint(1, 45)
 @login_required
@@ -45,7 +50,7 @@ def raku_search(request):
 
     url_basic_1 = "https://search.rakuten.co.jp/search/mall/"
     url_basic_in = "%E3%80%80"
-    url_basic_2 = "%E3%80%802021%E3%80%80テレビ%E3%80%80ギフト/"
+    url_basic_2 = "%E3%80%802021%E3%80%80テレビ%E3%80%80インスタ/"
     
     url = ""
     if keyword2 == "" and keyword3 == "":
@@ -130,10 +135,10 @@ def raku_search(request):
         # "title": titles[random],
         # "price": prices[random],
         # "link": links[random],
-        "image": images[random],
-        "title": titles[random],
-        "price": prices[random],
-        "link": links[random],
+        "image": images[4],
+        "title": titles[4],
+        "price": prices[4],
+        "link": links[4],
     }
     return render(request, 'rakus/raku_search.html', context)
 

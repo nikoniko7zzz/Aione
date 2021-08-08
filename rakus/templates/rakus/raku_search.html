@@ -4,6 +4,13 @@
 
 
 {% block main %}
+
+<!--<p>ここに楽天の画面を表示する</p>-->
+
+<!--                <section>-->
+<!--                    <button type="submit" class=href="{% url 'raku_search' %}"><span>GO</span></button>-->
+<!--                </section> -->
+
     <div class="search_box">
         <!--<h1 class="title">Aione</h1>-->
         <div class="shadow p-3 mb-5 bg-white rounded">
@@ -14,11 +21,12 @@
             <img src="{{ image }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>
             <p class="result_title">{{ title }}</p>
             <p>{{ price }}</p>
+            <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
+            
+            <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
             <p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>
         </div>
     </div>
-        
-        
 
 {% endblock %}
 

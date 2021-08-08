@@ -8,9 +8,10 @@
         <!--<h1 class="title">Aione</h1>-->
         <div class="shadow p-3 mb-5 bg-white rounded">
             <p class="subtitle">Let's AIONE</p>
-            <p class="new_btn">[ MY ]</p>
-            <p class="new_btn">[ GIFT ]</p>
-
+            <div style="display:flex; margin-bottom:40px; justify-content:center;">
+                <button type="button" class="btn btn-outline-secondary" style="width:90px; margin-right:10px;"">MY</button>
+                <button type="button" class="btn btn-outline-secondary" style="width:90px;">GIFT</button>
+            </div>
             <form action="{% url 'raku_search' %}" method="GET">
                 {% csrf_token %}
                 <a>keyword1: </a><input type="text" id="keyword1" name="keyword1">
@@ -20,11 +21,13 @@
                 <a>keyword3: </a><input type="text" id="keyword3" name="keyword3">
                 <br>
                 
-                
-                
                 <section>
-                    <button type="submit" class=href="{% url 'raku_search' %}"><span>GO</span></button>
+                    <button type="submit" class=href="{% url 'raku_get' %}"><span>GO</span></button>
                 </section> 
+                
+                <!--<section>-->
+                <!--    <button type="submit" class=href="{% url 'raku_search' %}"><span>GO</span></button>-->
+                <!--</section> -->
                 
             </form>
         </div>
