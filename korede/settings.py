@@ -120,6 +120,17 @@ USE_L10N = True
 
 USE_TZ = True
 
+# メールを実際には送らずに、コンソールに表示してくれる設定
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# メールを実際に送信できる↓
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# メールサーバーへの接続設定
+# EMAIL_HOST = 'smtp.gmail.com'　#送信メールサーバ
+# EMAIL_PORT = 587               #送信メールポート
+# EMAIL_HOST_USER = 'matsuokuniko7@gmail.com'　#送信ユーザ
+# EMAIL_HOST_PASSWORD = '0925kuni'　#送信パスポート
+# EMAIL_USE_TLS = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

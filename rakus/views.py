@@ -44,13 +44,20 @@ def raku_search(request):
     #     'keyword3': request.GET.get('keyword3'),
     # }
     
+    # お菓子/?max=5000&min=4000
+    
     keyword1 = request.GET.get('keyword1')
     keyword2 = request.GET.get('keyword2')
     keyword3 = request.GET.get('keyword3')
+    max = request.GET.get('max')
+    max_yen = "?max=" + max
+    min_yen = "&min=" + str(int(max)-1000)
 
     url_basic_1 = "https://search.rakuten.co.jp/search/mall/"
     url_basic_in = "%E3%80%80"
-    url_basic_2 = "%E3%80%802021%E3%80%80テレビ%E3%80%80インスタ/"
+    url_basic_2 = "%E3%80%80ギフト%E3%80%80テレビ/" + max_yen + min_yen + "&s=5"
+    
+    # https://search.rakuten.co.jp/search/mall/お中元%E3%80%80%E3%80%80ギフト%E3%80%80テレビ/&s=5?max=5000&min=4000
     
     url = ""
     if keyword2 == "" and keyword3 == "":
@@ -111,7 +118,7 @@ def raku_search(request):
         link_list.append(link) 
         # 偶数だけ取り出す
         links = link_list[::2]
-    # print(links)
+    print(links)
     # print(len(links))
     
     
@@ -135,10 +142,24 @@ def raku_search(request):
         # "title": titles[random],
         # "price": prices[random],
         # "link": links[random],
-        "image": images[4],
-        "title": titles[4],
-        "price": prices[4],
-        "link": links[4],
+        # "image": images[4],
+        # "title": titles[4],
+        # "price": prices[4],
+        # "link": links[4],
+        "image1": images[1],
+        "title1": titles[1],
+        "price1": prices[1],
+        "link1": links[1],
+        
+        "image2": images[2],
+        "title2": titles[2],
+        "price2": prices[2],
+        "link2": links[2],
+        
+        "image3": images[3],
+        "title3": titles[3],
+        "price3": prices[3],
+        "link3": links[3],
     }
     return render(request, 'rakus/raku_search.html', context)
 

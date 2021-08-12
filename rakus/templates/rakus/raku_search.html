@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load django_bootstrap5 %}
-
+<!--<link rel="stylesheet" href="rakus/css/slide.css">-->
 
 
 {% block main %}
@@ -10,23 +10,135 @@
 <!--                <section>-->
 <!--                    <button type="submit" class=href="{% url 'raku_search' %}"><span>GO</span></button>-->
 <!--                </section> -->
+<div class="slider">
+  
+  <a href="#slide-1">1</a>
+  <a href="#slide-2">2</a>
+  <a href="#slide-3">3</a>
+  <a href="#slide-4">4</a>
+  <a href="#slide-5">5</a>
 
-    <div class="search_box">
+  <div class="slides">
+    <div id="slide-1">
+      <div class="search_box">
+          <!--<h1 class="title">Aione</h1>-->
+          <div class="shadow p-3 mb-5 bg-white rounded">
+              <p class="subtitle">{{ keyword1 }}</p>
+              <p class="subtitle">{{ keyword2 }}</p>
+              <p class="subtitle">{{ keyword3 }}</p>
+              
+              <img src="{{ image1 }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>
+              <p class="result_title">{{ title1 }}</p>
+              <p>{{ price1 }}</p>
+              <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
+              
+              <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
+              <p><a href="{{ link1 }}" id="mylink">商品ページを見る</a></p>
+          </div>
+      </div>
+    </div>
+    
+    <div id="slide-2">
+      <div class="search_box">
+          <!--<h1 class="title">Aione</h1>-->
+          <div class="shadow p-3 mb-5 bg-white rounded">
+              <p class="subtitle">{{ keyword1 }}</p>
+              <p class="subtitle">{{ keyword2 }}</p>
+              <p class="subtitle">{{ keyword3 }}</p>
+              
+              <img src="{{ image2 }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>
+              <p class="result_title">{{ title2 }}</p>
+              <p>{{ price2 }}</p>
+              <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
+              
+              <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
+              <p><a href="{{ link2 }}" id="mylink">商品ページを見る</a></p>
+          </div>
+      </div>
+    </div>
+    
+    <div id="slide-3">
+      <div class="search_box">
+          <!--<h1 class="title">Aione</h1>-->
+          <div class="shadow p-3 mb-5 bg-white rounded">
+              <p class="subtitle">{{ keyword1 }}</p>
+              <p class="subtitle">{{ keyword2 }}</p>
+              <p class="subtitle">{{ keyword3 }}</p>
+              
+              <img src="{{ image3 }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>
+              <p class="result_title">{{ title3 }}</p>
+              <p>{{ price3 }}</p>
+              <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
+              
+              <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
+              <p><a href="{{ link3 }}" id="mylink">商品ページを見る</a></p>
+          </div>
+      </div>
+    </div>
+    
+    <div id="slide-4">
+      4
+    </div>
+    
+    <div id="slide-5">
+      5
+    </div>
+  </div>
+</div>
+
+    <!--<div class="search_box">-->
         <!--<h1 class="title">Aione</h1>-->
-        <div class="shadow p-3 mb-5 bg-white rounded">
-            <p class="subtitle">{{ keyword1 }}</p>
-            <p class="subtitle">{{ keyword2 }}</p>
-            <p class="subtitle">{{ keyword3 }}</p>
+    <!--    <div class="shadow p-3 mb-5 bg-white rounded">-->
+    <!--        <p class="subtitle">{{ keyword1 }}</p>-->
+    <!--        <p class="subtitle">{{ keyword2 }}</p>-->
+    <!--        <p class="subtitle">{{ keyword3 }}</p>-->
             
-            <img src="{{ image }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>
-            <p class="result_title">{{ title }}</p>
-            <p>{{ price }}</p>
+    <!--        <img src="{{ image1 }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>-->
+    <!--        <p class="result_title">{{ title1 }}</p>-->
+    <!--        <p>{{ price1 }}</p>-->
             <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
             
             <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
-            <p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>
-        </div>
-    </div>
+    <!--        <p><a href="{{ link1 }}" id="mylink">商品ページを見る</a></p>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
+    
+    <!--<div class="search_box">-->
+        <!--<h1 class="title">Aione</h1>-->
+    <!--    <div class="shadow p-3 mb-5 bg-white rounded">-->
+    <!--        <p class="subtitle">{{ keyword1 }}</p>-->
+    <!--        <p class="subtitle">{{ keyword2 }}</p>-->
+    <!--        <p class="subtitle">{{ keyword3 }}</p>-->
+            
+    <!--        <img src="{{ image2 }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>-->
+    <!--        <p class="result_title">{{ title2 }}</p>-->
+    <!--        <p>{{ price2 }}</p>-->
+            <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
+            
+            <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
+    <!--        <p><a href="{{ link2 }}" id="mylink">商品ページを見る</a></p>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
+    
+    <!--<div class="search_box">-->
+        <!--<h1 class="title">Aione</h1>-->
+    <!--    <div class="shadow p-3 mb-5 bg-white rounded">-->
+    <!--        <p class="subtitle">{{ keyword1 }}</p>-->
+    <!--        <p class="subtitle">{{ keyword2 }}</p>-->
+    <!--        <p class="subtitle">{{ keyword3 }}</p>-->
+            
+    <!--        <img src="{{ image3 }}" alt="商品画像" hight="300px" width="300px" margin:0 auto>-->
+    <!--        <p class="result_title">{{ title3 }}</p>-->
+    <!--        <p>{{ price3 }}</p>-->
+            <!--<p><a href="{{ link }}" id="mylink">商品ページを見る</a></p>-->
+            
+            <!--<a href="{% url 'raku_get' %}" class="btn_10"><span>商品ページを見る</span></a>-->
+    <!--        <p><a href="{{ link3 }}" id="mylink">商品ページを見る</a></p>-->
+    <!--    </div>-->
+    <!--</div>-->
+
 
 {% endblock %}
 
